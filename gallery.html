@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Gallery | Vivek's Kitchen</title>
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="short icon" href="image/short_icon.png">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="image/logo.png" alt="Restaurant Logo"></a>
+        </div>
+
+        <div class="nav-toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html" class="action">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li class="login"><a href="login.html">Login</a></li>
+            <li class="cart-icon">
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Banner -->
+    <div class="hero_banner">
+        <div class="banner_content">
+            <h1><span>Our</span> Gallery</h1>
+            <p class="subtitle">A visual feast of our culinary creations</p>
+            <div class="scroll_hint">
+                <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 10L12 15L17 10" stroke="var(--white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+        <div class="banner_overlay"></div>
+    </div>
+
+    <!-- Gallery Filter Controls -->
+    <div class="gallery_controls anim">
+        <div class="filter_buttons">
+            <button class="filter_btn active" data-filter="all">All</button>
+            <button class="filter_btn" data-filter="appetizers">Appetizers</button>
+            <button class="filter_btn" data-filter="mains">Main Courses</button>
+            <button class="filter_btn" data-filter="desserts">Desserts</button>
+            <button class="filter_btn" data-filter="drinks">Drinks</button>
+        </div>
+        <div class="search_box">
+            <input type="text" placeholder="Search dishes..." id="search-input">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="gallery anim">
+        <div class="gallery_box" id="gallery-container">
+            <!-- Images will be loaded via JavaScript -->
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div class="image_modal" id="image-modal">
+        <span class="close_modal">&times;</span>
+        <img class="modal_content" id="modal-image">
+        <div class="modal_caption" id="modal-caption"></div>
+        <div class="modal_nav">
+            <button id="prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button id="next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <div class="footer_main">
+            <div class="footer_tag">
+                <h2>Our Locations</h2>
+                <p><i class="fas fa-map-marker-alt"></i> Downtown Branch</p>
+                <p><i class="fas fa-map-marker-alt"></i> Westside Plaza</p>
+                <p><i class="fas fa-map-marker-alt"></i> Mall Food Court</p>
+                <p><i class="fas fa-map-marker-alt"></i> University District</p>
+                <p><i class="fas fa-map-marker-alt"></i> Airport Terminal</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Quick Links</h2>
+                <p><a href="index.html"><i class="fas fa-home"></i> Home</a></p>
+                <p><a href="about.html"><i class="fas fa-info-circle"></i> About</a></p>
+                <p><a href="menu.html"><i class="fas fa-utensils"></i> Menu</a></p>
+                <p><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></p>
+                <p><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Contact Us</h2>
+                <p><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fa-solid fa-mobile"></i> +1 (555) 987-6543</p>
+                <p><i class="fa-solid fa-envelope"></i> info@restaurant.com</p>
+                <p><i class="fa-solid fa-truck-fast"></i> orders@restaurant.com</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Opening Hours</h2>
+                <p><i class="fas fa-clock"></i> Monday-Friday: 11AM - 10PM</p>
+                <p><i class="fas fa-clock"></i> Saturday: 10AM - 11PM</p>
+                <p><i class="fas fa-clock"></i> Sunday: 10AM - 9PM</p>
+                <p><i class="fas fa-clock"></i> Holidays: 12PM - 8PM</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Follow Us</h2>
+                <div class="social_icons">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+
+                <div class="newsletter">
+                    <h3><i class="fas fa-envelope-open-text"></i> Subscribe to Newsletter</h3>
+                    <input type="email" placeholder="Your Email">
+                    <button><i class="fas fa-paper-plane"></i> Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer_bottom">
+            <p class="end">Design by<span><i class="fa-solid fa-heart"></i> Vivek's Kitchen</span></p>
+
+            <div class="back_to_top">
+                <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Restaurant</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="shortcut icon" href="image/short_icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="image/logo.png" alt="Restaurant Logo"></a>
+        </div>
+
+        <div class="nav-toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li class="login"><a href="login.html">Login</a></li>
+            <li class="cart-icon">
+                <a href="cart.html" class="action">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <div class="container">
+            <h1 class="section-title">Your <span>Shopping Cart</span></h1>
+
+            <div class="cart-container">
+                <div class="cart-items">
+                    <div class="cart-header">
+                        <h2>Items in Cart</h2>
+                    </div>
+
+                    <div id="cart-items-container">
+                        <!-- Cart items will be loaded here dynamically -->
+                    </div>
+
+                    <div class="empty-cart" id="empty-cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <h3>Your cart is empty</h3>
+                        <p>Add delicious items from our menu</p>
+                        <a href="menu.html" class="btn-primary">Browse Menu</a>
+                    </div>
+                </div>
+
+                <div class="cart-summary">
+                    <div class="summary-card">
+                        <h2>Order Summary</h2>
+
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span>Subtotal</span>
+                                <span id="subtotal">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Tax (10%)</span>
+                                <span id="tax">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Delivery Fee</span>
+                                <span id="delivery-fee">$2.99</span>
+                            </div>
+                            <div class="summary-row discount">
+                                <span>Discount</span>
+                                <span id="discount">-$0.00</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total</span>
+                                <span id="total">$0.00</span>
+                            </div>
+                        </div>
+
+                        <div class="promo-code">
+                            <input type="text" id="promo-code" placeholder="Enter promo code">
+                            <button id="apply-promo">Apply</button>
+                        </div>
+
+                        <button class="checkout-btn" id="checkout-btn">Proceed to Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkout-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Complete Your Order</h2>
+
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="customer-name">Full Name</label>
+                    <input type="text" id="customer-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="customer-email">Email Address</label>
+                    <input type="email" id="customer-email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="customer-phone">Phone Number</label>
+                    <input type="tel" id="customer-phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="delivery-address">Delivery Address</label>
+                    <textarea id="delivery-address" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="payment-method">Payment Method</label>
+                    <select id="payment-method" required>
+                        <option value="">Select Payment Method</option>
+                        <option value="cash">Cash on Delivery</option>
+                        <option value="card">Credit/Debit Card</option>
+                        <option value="paypal">PayPal</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-primary">Place Order</button>
+                <button type="button" class="btn-secondary" id="cancel-order">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bill Receipt Modal -->
+    <div class="modal" id="bill-modal">
+        <div class="modal-content bill-content">
+            <div class="bill-header">
+                <img src="image/logo.png" alt="Restaurant Logo">
+                <h2>Order Confirmation</h2>
+                <p id="order-date"></p>
+                <p id="order-id"></p>
+            </div>
+
+            <div class="bill-details">
+                <div class="bill-customer">
+                    <h3>Customer Information</h3>
+                    <p id="bill-customer-name"></p>
+                    <p id="bill-customer-email"></p>
+                    <p id="bill-customer-phone"></p>
+                    <p id="bill-customer-address"></p>
+                </div>
+
+                <div class="bill-items">
+                    <h3>Order Items</h3>
+                    <table id="bill-items-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Bill items will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="bill-summary">
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="bill-subtotal"></span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax (10%):</span>
+                        <span id="bill-tax"></span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Delivery Fee:</span>
+                        <span id="bill-delivery"></span>
+                    </div>
+                    <div class="summary-row discount">
+                        <span>Discount:</span>
+                        <span id="bill-discount"></span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Grand Total:</span>
+                        <span id="bill-total"></span>
+                    </div>
+                </div>
+
+                <div class="payment-method">
+                    <p><strong>Payment Method:</strong> <span id="bill-payment-method"></span></p>
+                </div>
+            </div>
+
+            <div class="bill-footer">
+                <p>Thank you for your order!</p>
+                <p>We hope to serve you again soon.</p>
+                <button class="btn-primary" id="print-bill">Print Receipt</button>
+                <button class="btn-secondary" id="close-bill">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order History Section -->
+    <section class="order-history-section" id="order-history">
+        <div class="container">
+            <h2 class="section-title">Your <span>Order History</span></h2>
+
+            <div class="order-history-container" id="order-history-container">
+                <!-- Order history will be loaded here dynamically -->
+                <div class="loading">Loading your order history...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer_main">
+            <div class="footer_tag">
+                <h2>Our Locations</h2>
+                <p><i class="fas fa-map-marker-alt"></i> Downtown Branch</p>
+                <p><i class="fas fa-map-marker-alt"></i> Westside Plaza</p>
+                <p><i class="fas fa-map-marker-alt"></i> Mall Food Court</p>
+                <p><i class="fas fa-map-marker-alt"></i> University District</p>
+                <p><i class="fas fa-map-marker-alt"></i> Airport Terminal</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Quick Links</h2>
+                <p><a href="index.html"><i class="fas fa-home"></i> Home</a></p>
+                <p><a href="about.html"><i class="fas fa-info-circle"></i> About</a></p>
+                <p><a href="menu.html"><i class="fas fa-utensils"></i> Menu</a></p>
+                <p><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></p>
+                <p><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Contact Us</h2>
+                <p><i class="fa-solid fa-phone"></i> +91 949-966-1142</p>
+                <p><i class="fa-solid fa-mobile"></i> +91 949-966-1142</p>
+                <p><i class="fa-solid fa-envelope"></i> info@restaurant.com</p>
+                <p><i class="fa-solid fa-truck-fast"></i> orders@restaurant.com</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Opening Hours</h2>
+                <p><i class="fas fa-clock"></i> Monday-Friday: 11AM - 10PM</p>
+                <p><i class="fas fa-clock"></i> Saturday: 10AM - 11PM</p>
+                <p><i class="fas fa-clock"></i> Sunday: 10AM - 9PM</p>
+                <p><i class="fas fa-clock"></i> Holidays: 12PM - 8PM</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Follow Us</h2>
+                <div class="social_icons">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+
+                <div class="newsletter">
+                    <h3><i class="fas fa-envelope-open-text"></i> Subscribe to Newsletter</h3>
+                    <input type="email" placeholder="Your Email">
+                    <button><i class="fas fa-paper-plane"></i> Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer_bottom">
+            <p class="end">Design by<span><i class="fa-solid fa-heart"></i> Vivek's Kitchen</span></p>
+
+            <div class="back_to_top">
+                <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+
+</html>

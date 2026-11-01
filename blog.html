@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Food Blog - Culinary Insights & Recipes</title>
+    <link rel="stylesheet" href="blog.css">
+    <link rel="shortcut icon" href="image/short_icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="image/logo.png" alt="Restaurant Logo"></a>
+        </div>
+
+        <div class="nav-toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html" class="action">Blog</a></li>
+            <li class="login"><a href="login.html">Login</a></li>
+            <li class="cart-icon">
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Banner -->
+    <div class="hero_banner">
+        <div class="banner_content">
+            <h1><span>Our</span> Food Blog</h1>
+            <p class="subtitle">Culinary stories, recipes, and chef insights</p>
+            <div class="scroll_hint">
+                <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 10L12 15L17 10" stroke="var(--white)" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="banner_overlay"></div>
+    </div>
+
+    <!-- Blog Content -->
+    <div class="main_blog anim">
+        <div class="slide_1">
+            <div class="blog_box">
+                <!-- Blog posts will be loaded here dynamically -->
+            </div>
+        </div>
+
+        <div class="slide_2">
+            <div class="follow_card">
+                <div class="follow_head">
+                    <h2 class="most_follow">Our <span>Chefs</span></h2>
+                </div>
+                <div class="chefs-container">
+                    <!-- Chef profiles will be loaded here dynamically -->
+                </div>
+            </div>
+
+            <!-- Saved Posts Section -->
+            <div class="saved-posts">
+                <h3><i class="fas fa-bookmark"></i> Saved Posts</h3>
+                <div class="saved-list">
+                    <!-- Saved posts will appear here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comment Modal -->
+    <div class="comment-modal" id="commentModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Comments</h3>
+            <div class="comments-container">
+                <!-- Comments will be loaded here -->
+            </div>
+            <div class="add-comment">
+                <textarea placeholder="Add your comment..."></textarea>
+                <button class="submit-comment">Post Comment</button>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <div class="footer_main">
+            <div class="footer_tag">
+                <h2>Our Locations</h2>
+                <p><i class="fas fa-map-marker-alt"></i> Downtown Branch</p>
+                <p><i class="fas fa-map-marker-alt"></i> Westside Plaza</p>
+                <p><i class="fas fa-map-marker-alt"></i> Mall Food Court</p>
+                <p><i class="fas fa-map-marker-alt"></i> University District</p>
+                <p><i class="fas fa-map-marker-alt"></i> Airport Terminal</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Quick Links</h2>
+                <p><a href="index.html"><i class="fas fa-home"></i> Home</a></p>
+                <p><a href="about.html"><i class="fas fa-info-circle"></i> About</a></p>
+                <p><a href="menu.html"><i class="fas fa-utensils"></i> Menu</a></p>
+                <p><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></p>
+                <p><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Contact Us</h2>
+                <p><i class="fa-solid fa-phone"></i> +91 949-966-1142</p>
+                <p><i class="fa-solid fa-mobile"></i> +91 949-966-1142</p>
+                <p><i class="fa-solid fa-envelope"></i> info@restaurant.com</p>
+                <p><i class="fa-solid fa-truck-fast"></i> orders@restaurant.com</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Opening Hours</h2>
+                <p><i class="fas fa-clock"></i> Monday-Friday: 11AM - 10PM</p>
+                <p><i class="fas fa-clock"></i> Saturday: 10AM - 11PM</p>
+                <p><i class="fas fa-clock"></i> Sunday: 10AM - 9PM</p>
+                <p><i class="fas fa-clock"></i> Holidays: 12PM - 8PM</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Follow Us</h2>
+                <div class="social_icons">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+
+                <div class="newsletter">
+                    <h3><i class="fas fa-envelope-open-text"></i> Subscribe to Newsletter</h3>
+                    <input type="email" placeholder="Your Email">
+                    <button><i class="fas fa-paper-plane"></i> Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer_bottom">
+            <p class="end">Design by<span><i class="fa-solid fa-heart"></i> Vivek's Kitchen</span></p>
+
+            <div class="back_to_top">
+                <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="blog.js"></script>
+</body>
+
+</html>

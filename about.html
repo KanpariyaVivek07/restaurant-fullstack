@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Food Website</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="shortcut icon" href="image/short_icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="image/logo.png" alt="Restaurant Logo"></a>
+        </div>
+
+        <div class="nav-toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="action">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li class="login"><a href="login.html">Login</a></li>
+            <li class="cart-icon">
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Banner -->
+    <div class="hero_banner">
+        <div class="banner_content">
+            <h1><span>About</span> Us</h1>
+            <p class="subtitle">Discover our story and passion for exceptional cuisine</p>
+            <div class="scroll_hint">
+                <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 10L12 15L17 10" stroke="var(--white)" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="banner_overlay"></div>
+    </div>
+
+    <!-- About Section -->
+    <div class="about anim">
+        <div class="about_main">
+            <div class="about_image">
+                <img src="image/about.png" alt="About our restaurant">
+            </div>
+
+            <div class="about_text">
+                <h3>Why food lovers choose us?</h3>
+                <p>
+                    At our restaurant, we combine culinary expertise with a passion for quality ingredients to create
+                    unforgettable dining experiences. Our chefs bring decades of international experience to every dish,
+                    using locally-sourced produce and traditional techniques with a modern twist.
+                </p>
+                <p>
+                    We believe food should be an adventure for the senses. From our signature dishes to seasonal
+                    specials, every item on our menu tells a story of flavor, craftsmanship, and dedication to
+                    excellence.
+                </p>
+
+                <div class="about_services">
+                    <div class="s_1">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <a href="#">Fast Delivery</a>
+                    </div>
+
+                    <div class="s_1">
+                        <i class="fa-brands fa-amazon-pay"></i>
+                        <a href="#">Easy Payment</a>
+                    </div>
+
+                    <div class="s_1">
+                        <i class="fa-solid fa-headset"></i>
+                        <a href="#">24/7 Service</a>
+                    </div>
+                </div>
+
+                <a href="menu.html" class="about_btn"><i class="fas fa-utensils"></i> Order Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer_main">
+            <div class="footer_tag">
+                <h2>Our Locations</h2>
+                <p><i class="fas fa-map-marker-alt"></i> Downtown Branch</p>
+                <p><i class="fas fa-map-marker-alt"></i> Westside Plaza</p>
+                <p><i class="fas fa-map-marker-alt"></i> Mall Food Court</p>
+                <p><i class="fas fa-map-marker-alt"></i> University District</p>
+                <p><i class="fas fa-map-marker-alt"></i> Airport Terminal</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Quick Links</h2>
+                <p><a href="index.html"><i class="fas fa-home"></i> Home</a></p>
+                <p><a href="about.html"><i class="fas fa-info-circle"></i> About</a></p>
+                <p><a href="menu.html"><i class="fas fa-utensils"></i> Menu</a></p>
+                <p><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></p>
+                <p><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Contact Us</h2>
+                <p><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fa-solid fa-mobile"></i> +1 (555) 987-6543</p>
+                <p><i class="fa-solid fa-envelope"></i> info@restaurant.com</p>
+                <p><i class="fa-solid fa-truck-fast"></i> orders@restaurant.com</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Opening Hours</h2>
+                <p><i class="fas fa-clock"></i> Monday-Friday: 11AM - 10PM</p>
+                <p><i class="fas fa-clock"></i> Saturday: 10AM - 11PM</p>
+                <p><i class="fas fa-clock"></i> Sunday: 10AM - 9PM</p>
+                <p><i class="fas fa-clock"></i> Holidays: 12PM - 8PM</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Follow Us</h2>
+                <div class="social_icons">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+
+                <div class="newsletter">
+                    <h3><i class="fas fa-envelope-open-text"></i> Subscribe to Newsletter</h3>
+                    <input type="email" placeholder="Your Email">
+                    <button><i class="fas fa-paper-plane"></i> Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer_bottom">
+            <p class="end">Design by<span><i class="fa-solid fa-heart"></i> Vivek's Kitchen</span></p>
+
+            <div class="back_to_top">
+                <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.getElementById('nav-toggle');
+            const navMenu = document.getElementById('nav-menu');
+
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', function () {
+                    this.classList.toggle('active');
+                    navMenu.classList.toggle('show');
+                });
+
+                // Close menu when clicking on a link
+                document.querySelectorAll('#nav-menu li a').forEach(link => {
+                    link.addEventListener('click', function () {
+                        if (window.innerWidth <= 768) {
+                            navToggle.classList.remove('active');
+                            navMenu.classList.remove('show');
+                        }
+                    });
+                });
+            }
+
+            // Back to top button functionality
+            const backToTop = document.querySelector('.back_to_top a');
+            if (backToTop) {
+                backToTop.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Show/hide button based on scroll position
+            window.addEventListener('scroll', function () {
+                const backToTop = document.querySelector('.back_to_top');
+                if (backToTop) {
+                    if (window.scrollY > 300) {
+                        backToTop.style.opacity = '1';
+                        backToTop.style.visibility = 'visible';
+                    } else {
+                        backToTop.style.opacity = '0';
+                        backToTop.style.visibility = 'hidden';
+                    }
+                }
+            });
+        });
+
+        // cart-count.js - Add this to all pages
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to update cart count
+            function updateCartCount() {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+
+                // Update all cart count elements on the page
+                const cartCountElements = document.querySelectorAll('#cart-count');
+                cartCountElements.forEach(element => {
+                    element.textContent = totalItems;
+                });
+
+                return totalItems;
+            }
+
+            // Initialize cart count on page load
+            updateCartCount();
+
+            // Listen for storage events (when cart is updated from another tab)
+            window.addEventListener('storage', function (e) {
+                if (e.key === 'cart') {
+                    updateCartCount();
+                }
+            });
+
+            // Add to cart functionality for menu items
+            document.addEventListener('click', function (e) {
+                if (e.target.closest('.menu_btn') || e.target.closest('.offer_btn')) {
+                    const button = e.target.closest('.menu_btn') || e.target.closest('.offer_btn');
+                    const card = button.closest('.menu_card, .offer_card');
+
+                    if (card) {
+                        const itemName = card.querySelector('h2, h3').textContent;
+                        const priceText = card.querySelector('.price, .discounted_price').textContent;
+                        const price = parseFloat(priceText.replace(/[^\d.]/g, ''));
+                        const image = card.querySelector('img').src;
+
+                        // Check if item already exists in cart
+                        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                        const existingItem = cart.find(item => item.name === itemName);
+
+                        if (existingItem) {
+                            existingItem.quantity += 1;
+                        } else {
+                            cart.push({
+                                name: itemName,
+                                price: price,
+                                quantity: 1,
+                                image: image
+                            });
+                        }
+
+                        // Save to localStorage
+                        localStorage.setItem('cart', JSON.stringify(cart));
+
+                        // Update cart count
+                        updateCartCount();
+
+                        // Show notification
+                        showNotification(`${itemName} added to cart!`);
+                    }
+                }
+            });
+
+            // Function to show notification
+            function showNotification(message) {
+                const notification = document.createElement('div');
+                notification.className = 'cart-notification';
+                notification.innerHTML = `
+            <div class="notification-content">
+                <p>${message}</p>
+            </div>
+        `;
+
+                document.body.appendChild(notification);
+
+                setTimeout(() => {
+                    notification.classList.add('show');
+                    setTimeout(() => {
+                        notification.classList.remove('show');
+                        setTimeout(() => {
+                            notification.remove();
+                        }, 300);
+                    }, 2000);
+                }, 10);
+            }
+        });
+    </script>
+</body>
+
+</html>

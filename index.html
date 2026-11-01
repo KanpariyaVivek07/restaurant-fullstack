@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Restaurant  Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="image/logo.png" style="width: 50px;">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="image/logo.png" alt="Restaurant Logo"></a>
+        </div>
+
+        <div class="nav-toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul id="nav-menu">
+            <li><a href="index.html" class="action">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li class="login"><a href="login.html">Login</a></li>
+            <li class="cart-icon">
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="Home">
+        <div class="main anim">
+            <div class="main_text">
+                <h1>Get Fresh<span> Food</span><br>in a Easy Way</h1>
+                <p>
+                    Experience the finest culinary delights delivered right to your doorstep.
+                    Our restaurant specializes in fresh, locally-sourced ingredients prepared
+                    by expert chefs. From gourmet burgers to authentic pizzas and refreshing
+                    beverages, we bring restaurant-quality meals to your home with lightning-fast
+                    delivery.
+                </p>
+                <a href="#reservation" class="main_btn">Table Book Now<i class="fa-solid fa-utensils"></i></a>
+            </div>
+
+            <div class="main_image">
+                <img src="image/main_img.png" alt="Delicious Food">
+            </div>
+        </div>
+    </section>
+
+    <!--About-->
+    <div class="about">
+        <div class="about_main">
+            <div class="about_image">
+                <img src="image/about.png" alt="About Our Restaurant">
+            </div>
+
+            <div class="about_text">
+                <h1><span>About</span>Us</h1>
+                <h3>Why choose us?</h3>
+                <p>
+                    Founded in 2010, our restaurant has been serving the community with passion
+                    and dedication for over a decade. We believe that great food starts with
+                    exceptional ingredients, which is why we partner with local farmers and
+                    suppliers to bring you the freshest produce, meats, and dairy products.
+                </p>
+
+                <div class="about_services">
+                    <div class="s_1">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <a href="#">Fast Delivery</a>
+                    </div>
+
+                    <div class="s_1">
+                        <i class="fa-brands fa-amazon-pay"></i>
+                        <a href="#">Easy Payment</a>
+                    </div>
+
+                    <div class="s_1">
+                        <i class="fa-solid fa-headset"></i>
+                        <a href="#">24 x 7 Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Menu-->
+    <div class="menu">
+        <h1>Our<span>Menu</span></h1>
+
+        <div class="menu_box">
+            <div class="menu_card">
+                <div class="menu_img">
+                    <img src="image/menu_1.jpg" alt="Classic Burger">
+                </div>
+
+                <div class="menu_text">
+                    <h2>Classic Burger</h2>
+                    <p>
+                        Juicy beef patty with fresh lettuce, tomatoes, cheese, and our special
+                        house sauce on a toasted brioche bun. Served with crispy fries.
+                    </p>
+
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <p class="price">$12.99<sub><del>$15.99</del></sub></p>
+
+                    <a href="#" class="menu_btn"><i class="fa-solid fa-shopping-cart"></i>Order Now</a>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_img">
+                    <img src="image/menu_2.jpg" alt="Fresh Smoothie">
+                </div>
+
+                <div class="menu_text">
+                    <h2>Fresh Smoothie</h2>
+                    <p>
+                        Blend of seasonal fruits with yogurt and honey. Choose from strawberry,
+                        mango, or mixed berry. Perfect refreshing drink for any time of day.
+                    </p>
+
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <p class="price">$6.99<sub><del>$8.99</del></sub></p>
+
+                    <a href="#" class="menu_btn"><i class="fa-solid fa-shopping-cart"></i>Order Now</a>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_img">
+                    <img src="image/menu_3.png" alt="Margherita Pizza">
+                </div>
+
+                <div class="menu_text">
+                    <h2>Margherita Pizza</h2>
+                    <p>
+                        Traditional Italian pizza with fresh mozzarella, basil, and our signature
+                        tomato sauce on hand-tossed dough. Baked in a stone oven for perfect crust.
+                    </p>
+
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <p class="price">$18.99<sub><del>$22.99</del></sub></p>
+
+                    <a href="#" class="menu_btn"><i class="fa-solid fa-shopping-cart"></i>Order Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner (Special Offer) -->
+    <div class="banner">
+        <div class="banner_content">
+            <h1>LIMITED <span>TIME</span> OFFER!</h1>
+            <div class="discount_badge">
+                <h2>50% <span>OFF</span></h2>
+                <p>On All Pizzas & Burgers</p>
+            </div>
+            <div class="countdown_timer">
+                <div class="timer_box">
+                    <span id="days">00</span>
+                    <small>Days</small>
+                </div>
+                <div class="timer_box">
+                    <span id="hours">00</span>
+                    <small>Hours</small>
+                </div>
+                <div class="timer_box">
+                    <span id="minutes">00</span>
+                    <small>Mins</small>
+                </div>
+                <div class="timer_box">
+                    <span id="seconds">00</span>
+                    <small>Secs</small>
+                </div>
+            </div>
+            <a href="#" class="banner_btn pulse_animation">
+                <i class="fa-solid fa-bolt"></i> Grab This Deal Now!
+            </a>
+        </div>
+    </div>
+
+    <!--Gallery-->
+    <div class="gallery">
+        <h1>Popular<span>Gallery</span></h1>
+
+        <div class="gallery_box">
+            <div class="gallery_image">
+                <img src="image/gallery_1.jpg" alt="Restaurant Interior">
+            </div>
+
+            <div class="gallery_image">
+                <img src="image/gallery_2.jpg" alt="Delicious Food">
+            </div>
+
+            <div class="gallery_image">
+                <img src="image/gallery_3.webp" alt="Chef Preparing Food">
+            </div>
+        </div>
+    </div>
+
+    <!-- Offers -->
+    <div class="offer">
+        <div class="section_header">
+            <h1>Hot <span>Deals</span></h1>
+            <p>Don't miss out on these exclusive offers</p>
+        </div>
+
+        <div class="offer_container">
+            <div class="offer_card">
+                <div class="offer_img">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Burger Deal">
+                    <div class="offer_tag">Limited Time</div>
+                </div>
+                <div class="offer_content">
+                    <h3>Mega Burger Combo</h3>
+                    <p>Get our signature burger with fries and drink at 40% off</p>
+                    <div class="price">
+                        <span class="original_price">$15.99</span>
+                        <span class="discounted_price">$9.59</span>
+                    </div>
+                    <a href="#" class="offer_btn">
+                        <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                    </a>
+                </div>
+            </div>
+
+            <div class="offer_card">
+                <div class="offer_img">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Pizza Deal">
+                    <div class="offer_tag">Family Pack</div>
+                </div>
+                <div class="offer_content">
+                    <h3>2 Large Pizzas + Free Drink</h3>
+                    <p>Order any two large pizzas and get a free soft drink</p>
+                    <div class="price">
+                        <span class="original_price">$29.98</span>
+                        <span class="discounted_price">$24.99</span>
+                    </div>
+                    <a href="#" class="offer_btn">
+                        <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                    </a>
+                </div>
+            </div>
+
+            <div class="offer_card">
+                <div class="offer_img">
+                    <img src="https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Pasta Deal">
+                    <div class="offer_tag">Weekend Special</div>
+                </div>
+                <div class="offer_content">
+                    <h3>Pasta Combo for Two</h3>
+                    <p>Two pasta dishes with garlic bread and salad - 30% off</p>
+                    <div class="price">
+                        <span class="original_price">$22.50</span>
+                        <span class="discounted_price">$15.75</span>
+                    </div>
+                    <a href="#" class="offer_btn">
+                        <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                    </a>
+                </div>
+            </div>
+
+            <div class="offer_card">
+                <div class="offer_img">
+                    <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Breakfast Deal">
+                    <div class="offer_tag">Morning Deal</div>
+                </div>
+                <div class="offer_content">
+                    <h3>Breakfast Bundle</h3>
+                    <p>Pancakes, eggs, bacon and coffee - perfect morning combo</p>
+                    <div class="price">
+                        <span class="original_price">$12.99</span>
+                        <span class="discounted_price">$8.99</span>
+                    </div>
+                    <a href="#" class="offer_btn">
+                        <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Team-->
+    <div class="team">
+        <h1>Our<span>Team</span></h1>
+
+        <div class="team_box">
+            <div class="team_card">
+                <div class="team_img">
+                    <img src="image/team_1.jpg" alt="Chef Michael Rodriguez">
+                </div>
+
+                <div class="team_tag">
+                    <h2>Chef Michael Rodriguez</h2>
+                    <p class="job">Head Chef</p>
+                    <p class="info">
+                        With over 15 years of culinary experience, Chef Michael brings his
+                        passion for Mediterranean cuisine to our kitchen. Trained in Italy
+                        and France, he creates innovative dishes that blend traditional
+                        techniques with modern flavors.
+                    </p>
+                </div>
+            </div>
+
+            <div class="team_card">
+                <div class="team_img">
+                    <img src="image/team_2.jpg" alt="Chef Sarah Chen">
+                </div>
+
+                <div class="team_tag">
+                    <h2>Chef Sarah Chen</h2>
+                    <p class="job">Pastry Chef</p>
+                    <p class="info">
+                        Chef Sarah specializes in creating delectable desserts and pastries
+                        that are both beautiful and delicious. With a background in French
+                        patisserie, she brings elegance and creativity to every sweet creation.
+                    </p>
+                </div>
+            </div>
+
+            <div class="team_card">
+                <div class="team_img">
+                    <img src="image/team_3.jpg" alt="Chef David Thompson">
+                </div>
+
+                <div class="team_tag">
+                    <h2>Chef David Thompson</h2>
+                    <p class="job">Sous Chef</p>
+                    <p class="info">
+                        Chef David brings his expertise in American comfort food and BBQ
+                        to our kitchen. With 10 years of experience in Southern cuisine,
+                        he ensures every dish is prepared with authentic flavors.
+                    </p>
+                </div>
+            </div>
+
+            <div class="team_card">
+                <div class="team_img">
+                    <img src="image/team_4.jpg" alt="Chef Maria Garcia">
+                </div>
+
+                <div class="team_tag">
+                    <h2>Chef Maria Garcia</h2>
+                    <p class="job">Line Cook</p>
+                    <p class="info">
+                        Chef Maria specializes in Mexican and Latin American cuisine,
+                        bringing authentic flavors and traditional cooking methods to
+                        our kitchen. Her expertise in spices ensures every dish bursts with flavor.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Blog-->
+    <div class="blog">
+        <h1>Our<span>Blog</span></h1>
+        <div class="blog_box">
+            <div class="blog_card">
+                <div class="blog_img">
+                    <img src="image/blog_1.jpeg" alt="Pizza Dough Blog">
+                </div>
+
+                <div class="blog_tag">
+                    <div class="blog_date">
+                        <p>18 May 2022<i class="fa-solid fa-calendar-days"></i></p>
+                    </div>
+
+                    <h3 class="blog_heading">
+                        The Secret to Perfect Homemade Pizza Dough
+                    </h3>
+
+                    <p class="blog_text">
+                        Discover the art of creating restaurant-quality pizza dough at home.
+                        Learn about the perfect flour-to-water ratio, proper kneading techniques,
+                        and the importance of letting your dough rest.
+                    </p>
+
+                    <hr>
+
+                    <div class="view_and_like">
+                        <div class="view">
+                            <p>15.3K Views</p>
+                            <p class="b_comm">786 comments</p>
+                        </div>
+
+                        <div class="like">
+                            <p>3K</p>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog_card">
+                <div class="blog_img">
+                    <img src="image/blog_2.jpg" alt="Seasonal Ingredients">
+                </div>
+
+                <div class="blog_tag">
+                    <div class="blog_date">
+                        <p>12 June 2024<i class="fa-solid fa-calendar-days"></i></p>
+                    </div>
+
+                    <h3 class="blog_heading">
+                        Seasonal Ingredients: What's Fresh This Month
+                    </h3>
+
+                    <p class="blog_text">
+                        Explore the freshest seasonal ingredients that are making their way
+                        into our kitchen this month. From spring asparagus to summer berries,
+                        learn how we incorporate local, seasonal produce.
+                    </p>
+
+                    <hr>
+
+                    <div class="view_and_like">
+                        <div class="view">
+                            <p>15.3K Views</p>
+                            <p class="b_comm">786 comments</p>
+                        </div>
+
+                        <div class="like">
+                            <p>3K</p>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog_card">
+                <div class="blog_img">
+                    <img src="image/blog_3.jpg" alt="Kitchen Behind the Scenes">
+                </div>
+
+                <div class="blog_tag">
+                    <div class="blog_date">
+                        <p>8 June 2024<i class="fa-solid fa-calendar-days"></i></p>
+                    </div>
+
+                    <h3 class="blog_heading">
+                        Behind the Scenes: A Day in Our Kitchen
+                    </h3>
+
+                    <p class="blog_text">
+                        Take a peek behind the scenes and discover what goes into preparing
+                        your favorite dishes. From early morning prep work to the final
+                        plating, see how our dedicated team works together.
+                    </p>
+
+                    <hr>
+
+                    <div class="view_and_like">
+                        <div class="view">
+                            <p>15.3K Views</p>
+                            <p class="b_comm">786 comments</p>
+                        </div>
+
+                        <div class="like">
+                            <p>3K</p>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reservation Section -->
+    <div class="reservation_section" id="reservation">
+        <div class="reservation_container">
+            <div class="reservation_image">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    alt="Restaurant Interior">
+            </div>
+
+            <div class="reservation_form">
+                <h2>Book <span>Your Table</span></h2>
+                <p>Reserve your dining experience in advance</p>
+
+                <form id="reservationForm">
+                    <div class="form_group">
+                        <input type="text" id="fullName" placeholder="Full Name" required>
+                        <i class="fa-solid fa-user" name=""></i>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <div class="form_group">
+                        <input type="email" id="email" placeholder="Email Address" required>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form_group">
+                        <input type="tel" id="phone" placeholder="Phone Number" required>
+                        <i class="fa-solid fa-phone"></i>
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+
+                    <div class="form_group">
+                        <select id="partySize" required>
+                            <option value="" disabled selected>Number of Guests</option>
+                            <option value="1-2">1-2 People</option>
+                            <option value="3-4">3-4 People</option>
+                            <option value="5-6">5-6 People</option>
+                            <option value="7+">7+ People</option>
+                        </select>
+                        <i class="fa-solid fa-users"></i>
+                        <span class="error-message" id="partySizeError"></span>
+                    </div>
+
+                    <div class="form_group">
+                        <input type="date" id="reservationDate" required>
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span class="error-message" id="dateError"></span>
+                    </div>
+
+                    <div class="form_group">
+                        <input type="time" id="reservationTime" required>
+                        <i class="fa-solid fa-clock"></i>
+                        <span class="error-message" id="timeError"></span>
+                    </div>
+
+                    <div class="form_group">
+                        <textarea id="specialRequests" placeholder="Special Requests (Optional)"></textarea>
+                        <i class="fa-solid fa-comment"></i>
+                    </div>
+
+                    <button type="submit" class="submit_btn">
+                        <i class="fa-solid fa-bookmark"></i> Book Table
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bookings Table Section -->
+    <div class="bookings_section">
+        <h2>Your <span>Reservations</span></h2>
+        <div class="bookings_table_container">
+            <table id="bookingsTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Party Size</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Requests</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="bookingsTableBody">
+                    <!-- Bookings will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <div class="footer_main">
+            <div class="footer_tag">
+                <h2>Our Locations</h2>
+                <p><i class="fas fa-map-marker-alt"></i> Downtown Branch</p>
+                <p><i class="fas fa-map-marker-alt"></i> Westside Plaza</p>
+                <p><i class="fas fa-map-marker-alt"></i> Mall Food Court</p>
+                <p><i class="fas fa-map-marker-alt"></i> University District</p>
+                <p><i class="fas fa-map-marker-alt"></i> Airport Terminal</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Quick Links</h2>
+                <p><a href="index.html"><i class="fas fa-home"></i> Home</a></p>
+                <p><a href="about.html"><i class="fas fa-info-circle"></i> About</a></p>
+                <p><a href="menu.html"><i class="fas fa-utensils"></i> Menu</a></p>
+                <p><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></p>
+                <p><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Contact Us</h2>
+                <p><i class="fa-solid fa-phone"></i> +91 949-966-1142</p>
+                <p><i class="fa-solid fa-mobile"></i> +91 949-966-1142</p>
+                <p><i class="fa-solid fa-envelope"></i> info@restaurant.com</p>
+                <p><i class="fa-solid fa-truck-fast"></i> orders@restaurant.com</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Opening Hours</h2>
+                <p><i class="fas fa-clock"></i> Monday-Friday: 11AM - 10PM</p>
+                <p><i class="fas fa-clock"></i> Saturday: 10AM - 11PM</p>
+                <p><i class="fas fa-clock"></i> Sunday: 10AM - 9PM</p>
+                <p><i class="fas fa-clock"></i> Holidays: 12PM - 8PM</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Follow Us</h2>
+                <div class="social_icons">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+
+                <div class="newsletter">
+                    <h3><i class="fas fa-envelope-open-text"></i> Subscribe to Newsletter</h3>
+                    <input type="email" placeholder="Your Email">
+                    <button><i class="fas fa-paper-plane"></i> Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer_bottom">
+            <p class="end">Design by<span><i class="fa-solid fay-heart"></i> Vivek's Kitchen</span></p>ko
+
+            <div class="back_to_top">
+                <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Check authentication on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            const isLoggedIn = localStorage.getItem('userLoggedIn') === 'true';
+
+            if (!isLoggedIn) {
+                // Show a welcome message with login prompt
+                const welcomeBanner = document.createElement('div');
+                welcomeBanner.className = 'welcome-banner';
+                welcomeBanner.innerHTML = `
+            <div class="welcome-content">
+                <h3>Welcome to Our Restaurant!</h3>
+                <p>Please <a href="login.html">login</a> or <a href="signup.html">create an account</a> to place orders and make reservations.</p>
+                <button class="close-welcome">×</button>
+            </div>
+        `;
+                document.body.prepend(welcomeBanner);
+
+                // Close banner functionality
+                document.querySelector('.close-welcome').addEventListener('click', function () {
+                    welcomeBanner.remove();
+                });
+            }
+        });
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>
